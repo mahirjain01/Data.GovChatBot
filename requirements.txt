@@ -1,0 +1,13 @@
+streamlit
+python-dotenv
+datagovindia
+pydantic
+uvicorn
+fastapi
+langchain
+langchain_experimental
+transformers 
+accelerate 
+bitsandbytes
+tabulate
+openai
