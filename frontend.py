@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 import pandas as pd
 
-# Define the base URL for your FastAPI server
 BASE_URL = "http://127.0.0.1:8000"  # Update with your actual FastAPI server URL
 
 st.title("Data Downloader and Chatbot App")
