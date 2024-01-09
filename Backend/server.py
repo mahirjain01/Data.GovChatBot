@@ -1,12 +1,17 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from data_downloader_module import DataDownloader
-from chatbot import create_chatbot  # Import the chatbot 
+from chatbot import create_chatbot  
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
 # Initialize the DataDownloader with API key
-data_downloader = DataDownloader(api_key="579b464db66ec23bdd0000010d1ac8f962324ed75fd8f4478ff7ac3a")
+database_url = os.getenv("DATAGOVINDIA_API_KEY")
+data_downloader = DataDownloader(database_url)
 
 class SearchRequest(BaseModel):
     query: str
